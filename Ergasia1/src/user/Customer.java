@@ -1,35 +1,36 @@
 package user;
 
-public class Customer extends User {
-	private String numOfSeenFilms;
+import cinema.*;
 
+public class Customer extends User {
+	
+	private int numOfSeenFilms;
 	
 	public Customer() {
+		numOfSeenFilms = 0;
+	}
 		
-		
+	
+	public void makeReservation(Show show, int numberOfTickets, String reservedName) {
+		if(show.isAvailable()) {
+			if(show.getTicketsAvailable() >= numberOfTickets) {
+				System.out.println("You succesfully made a reservation " + reservedName);
+				numOfSeenFilms++;
+			}else {
+				System.out.println("Not enough tickets.");
+			}
+		}else {
+			System.out.println("Full theater!");
 		}
-	
-	
-	public Customer setNumOfSeenFilms(String numOfSeenFilms) {
-		this.numOfSeenFilms=numOfSeenFilms;
-		return this;
-	}
-
-	public String Customer getNumOfSeenFilms() {
-		return this.numOfSeenFilms;
 	}
 	
-	public void increaseSeenFilms() {
-		this.numOfSeenFilms +=1;
-	}
-	
-	private void makeReservation() {
-		System.out.println("You succesfully made a reservation");
-	}
-	private void showAvailableFilms() {
+	public void showAvailableFilms() {
+		//TODO Schedule
 		System.out.println("These are the available films today:");
 	}
-	private void viewReservation() {
+	
+	public void viewReservation() {
+		//Find reservation and print
 		System.out.println("Your reservation:");
 	}
 }

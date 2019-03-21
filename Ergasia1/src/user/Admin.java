@@ -7,10 +7,25 @@ public class Admin extends User {
 		
 	}
 	
-	private User createUser(String name, String username, Property prop) {
-		User newUser = new User().setName(name).setUsername(username);	
+	public User createUser(String name, String username, String password, int age, Property property, String phoneNumber) {
+		User newUser = new User()
+				.setName(name)
+				.setUsername(username)
+				.setPassword(password)
+				.setAge(age)
+				.setProperty(property)
+				.setPhoneNumber(phoneNumber);
+		//save on db
 		return newUser;
 	}
 	
-	//private void deleteUser(UUID id)
+	public void deleteUser(String username, String password) {
+		//search for user and delete from db
+		System.out.println("User " + username + " has been deleted.");
+	}
+	
+	public void updateUser(String username, String password) {
+		//search in db and update
+		System.out.println("User " + username + " has been updated");
+	}
 }

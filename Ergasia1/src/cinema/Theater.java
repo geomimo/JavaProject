@@ -1,16 +1,23 @@
 package cinema;
 
+import java.util.UUID;
 
 public class Theater {
 
-	private int id;
+	private UUID id;
+	private String name;
 	private int numberOfSeats;
 	private TheaterCategory category;
 	
 	public Theater() {
-		//set id
+		id = UUID.randomUUID();
 	}
 
+	public Theater setName(String name) {
+		this.name = name;
+		return this;
+	}
+	
 	public Theater setNumberOfSeats(int numberOfSeats) {
 		this.numberOfSeats = numberOfSeats;
 		return this;
@@ -21,15 +28,15 @@ public class Theater {
 		return this;
 	}
 	
-	public int getId() {
-		return this.id;
+	public String getName() {
+		return name;
 	}
 	
 	public int getNumberOfSeats() {
-		return this.numberOfSeats;
+		return numberOfSeats;
 	}
 	
 	public TheaterCategory getCategory() {
-		return this.category;
+		return category;
 	}
 }

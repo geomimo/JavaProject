@@ -5,17 +5,17 @@ import java.util.UUID;
 
 public class User {
 	
-	protected String name;
 	protected UUID id;
+	protected String name;
 	protected String username;
 	protected String password;
 	protected int age;
 	protected Property property;
-	protected long phoneNumber;
+	protected String phoneNumber;
 	protected Date lastLogin;
 	
 	public User() {
-		//this.id = new UUID();
+		this.id = UUID.randomUUID();
 	}
 	
 	public User setName(String name) {
@@ -43,7 +43,7 @@ public class User {
 		return this;
 	}
 	
-	public User setPhoneNumber(long phoneNumber) {
+	public User setPhoneNumber(String phoneNumber) {
 		this.phoneNumber=phoneNumber;
 		return this;
 	}
@@ -54,31 +54,31 @@ public class User {
 	}
 	
 	public String getName() {
-		return this.name;
+		return name;
 	}
 	
 	public String getUsername() {
-		return this.username;
+		return username;
 	}
 	
 	public String getPassword() {
-		return this.password;
+		return password;
 	}
 	
 	public int getAge() {
-		return this.age;
+		return age;
 	}
 	
 	public Property getProperty() {
-		return this.property;
+		return property;
 	}
 	
-	public long getPhoneNumber() {
-		return this.phoneNumber;
+	public String getPhoneNumber() {
+		return phoneNumber;
 	}
 	
 	public Date getLastLogin() {
-		return this.lastLogin;
+		return lastLogin;
 	}
 }
 
