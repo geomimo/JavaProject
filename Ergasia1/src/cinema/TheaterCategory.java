@@ -3,7 +3,7 @@ package cinema;
 public enum TheaterCategory {
 	NORMAL,
 	THREE_D,
-	TWO_SD,
+	TWO_D,
 	IMAX,
 	DOLBY_ATMOS
 }

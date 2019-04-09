@@ -1,6 +1,5 @@
 package cinema;
 
-import java.util.Date;
 import java.util.UUID;
 
 public class Show {
@@ -8,7 +7,7 @@ public class Show {
 	private UUID id;
 	private Film film;
 	private Theater theater;
-	private Date date;
+	private String date;
 	private int ticketsAvailable;
 	private boolean isAvailable;
 	
@@ -16,6 +15,11 @@ public class Show {
 	public Show() {
 		id = UUID.randomUUID();
 		isAvailable = true;
+	}
+
+	public Show setId(UUID id) {
+		this.id = id;
+		return this;
 	}
 	
 	public Show setFilm(Film film) {
@@ -28,17 +32,25 @@ public class Show {
 		return this;
 	}
 	
-	public Show setDate(Date date) {
+	public Show setDate(String date) {
 		this.date = date;
 		return this;
 	}
-	
-	
+		
 	public Show setTicketsAvailable(int ticketsAvailable) {
 		this.ticketsAvailable = ticketsAvailable;
 		return this;
 	}
+	
+	public Show setIsAvailable(boolean available) {
+		this.isAvailable = available;
+		return this;
+	}
 
+	public UUID getId() {
+		return id;
+	}
+	
 	public Film getFilm() {
 		return film;
 	}
@@ -47,7 +59,7 @@ public class Show {
 		return theater;
 	}
 	
-	public Date getDate() {
+	public String getDate() {
 		return date;
 	}
 	
@@ -58,4 +70,11 @@ public class Show {
 	public boolean isAvailable() {
 		return isAvailable;
 	}
+	
+	public void decreaseTickets(int n) {
+		ticketsAvailable -= n;
+		if(ticketsAvailable == 0) isAvailable = false;
+	}
+
+	
 }

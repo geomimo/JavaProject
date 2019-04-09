@@ -1,0 +1,5 @@
+791162b3-8bf1-4e9e-b1ba-f5fbd602bfa7,admin,admin,admin,0,Admin,admin
+809d4dd5-ded9-4dcc-912c-15fbd602bfa7,xristos,ntostis,12345,21,ContentAdmin,746547564
+4ee11b43-989d-4e77-80dd-338649527edf,customer,customer,12345,20,Customer,43242423
+c10fa5ac-07b3-4136-8b06-c412eab51914,Johnyboy,Johnyboy,12345,20,ContentAdmin,143141
+fbe2c8a9-4d87-4909-a40b-3f46553096cd,customer1,customer1,54321,2,Customer,34333

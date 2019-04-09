@@ -8,10 +8,15 @@ public class Film {
 	private String title;
 	private int duration;
 	private String description;
-	private FilmCategory category[];
+	private FilmCategory category;
 	
 	public Film() {
 		id = UUID.randomUUID();
+	}
+	
+	public Film setId(UUID id) {
+		this.id = id;
+		return this;
 	}
 	
 	public Film setTitle(String title) {
@@ -29,9 +34,13 @@ public class Film {
 		return this;
 	}
 	
-	public Film setCategory(FilmCategory category[]) {
+	public Film setCategory(FilmCategory category) {
 		this.category = category;
 		return this;
+	}
+	
+	public UUID getId() {
+		return id;
 	}
 	
 	public String getTitle() {
@@ -46,7 +55,7 @@ public class Film {
 		return description;
 	}
 	
-	public FilmCategory[] getCategory() {
+	public FilmCategory getCategory() {
 		return category;
 	}
 	

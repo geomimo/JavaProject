@@ -13,6 +13,11 @@ public class Theater {
 		id = UUID.randomUUID();
 	}
 
+	public Theater setId(UUID id) {
+		this.id=id;
+		return this;
+	}
+	
 	public Theater setName(String name) {
 		this.name = name;
 		return this;
@@ -26,6 +31,10 @@ public class Theater {
 	public Theater setCategory(TheaterCategory category) {
 		this.category = category;
 		return this;
+	}
+	
+	public UUID getId() {
+		return id;
 	}
 	
 	public String getName() {
